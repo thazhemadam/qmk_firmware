@@ -67,9 +67,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef AUDIO_ENABLE
     #define AUDIO_VOICES
     #define AUDIO_PIN F0
+
+    #ifdef CONVERT_TO_STEMCELL
     #define AUDIO_PWM_DRIVER PWMD2
     #define AUDIO_PWM_CHANNEL 1
     #define AUDIO_STATE_TIMER GPTD4
+    #endif // CONVERT_TO_STEMCELL
+
+    #ifdef CONVERT_TO_RP2040_CE
+    #define AUDIO_PWM_DRIVER PWMD0
+    #define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_A
+    #define AUDIO_STATE_TIMER GPTD1
+    #endif // CONVERT_TO_(any_rp2040)
+
     #define AUDIO_VOICES
     // #define AUDIO_PWM_PAL_MODE 42 // only if using AUDIO_DRIVER = pwm_hardware
     // #define NO_MUSIC_MODE

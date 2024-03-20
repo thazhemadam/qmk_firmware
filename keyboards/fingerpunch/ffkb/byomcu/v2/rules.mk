@@ -40,7 +40,7 @@ EXTRAFLAGS     += -flto     # macros disabled, as a lot of barobord features req
 MOUSEKEY_ENABLE = no
 
 AUDIO_ENABLE ?= no
-AUDIO_DRIVER = pwm_software
+AUDIO_DRIVER = pwm_hardware
 
 HAPTIC_ENABLE ?= no
 HAPTIC_DRIVER = drv2605l
