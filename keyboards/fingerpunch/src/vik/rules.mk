@@ -104,8 +104,8 @@ ifeq ($(strip $(VIK_TRACKPOINT)), yes)
    ###### Actual VIK logic and options below:
    # Uncomment these two lines, and one of the modes to test the various options, see:
    # https://discord.com/channels/939959680611020840/1179500491525328926/1189474876386459678
-   # PS2_MOUSE_ENABLE = yes
-   # PS2_ENABLE = yes
+   PS2_MOUSE_ENABLE = yes
+   PS2_ENABLE = yes
 
    # Busywait mode: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_ps2_mouse.md#busywait-version-idbusywait-version
    # PS2_DRIVER = busywait
@@ -115,7 +115,7 @@ ifeq ($(strip $(VIK_TRACKPOINT)), yes)
    # PS2_DRIVER = interrupt
 
    # RP2040 pio / vendor mode: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_ps2_mouse.md#rp2040-pio-version-idrp2040-pio-version
-   # PS2_DRIVER = vendor
+   PS2_DRIVER = vendor
 
    OPT_DEFS += -DVIK_TRACKPOINT
 endif
