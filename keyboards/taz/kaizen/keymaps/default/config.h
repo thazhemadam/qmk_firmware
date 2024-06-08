@@ -1,4 +1,4 @@
-#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+// #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 #define AUTO_MOUSE_DEFAULT_LAYER 5
 
 // Define only one of the two below, but not both.
