@@ -1,11 +1,11 @@
 #pragma once
 
-#include "keyboards/fingerpunch/src/config_pre.h"
+// #include "keyboards/fingerpunch/src/config_pre.h"
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 220U
 
-#define SPI_DRIVER SPID0
+// #define SPI_DRIVER SPID0
 #define SPI_SCK_PIN GP2
 #define SPI_MOSI_PIN GP3
 #define SPI_MISO_PIN GP4
@@ -27,10 +27,10 @@
 
 // VIK
 #undef VIK_ENABLE
-#define VIK_ENABLE
+// #define VIK_ENABLE
 
 #ifdef VIK_ENABLE
-#define VIK_SPI_DRIVER    SPID1
+// #define VIK_SPI_DRIVER    SPID0
 #define VIK_SPI_SCK_PIN   GP2
 #define VIK_SPI_MOSI_PIN  GP3
 #define VIK_SPI_MISO_PIN  GP4
@@ -71,4 +71,4 @@ FINGERPUNCH AUDIO FEATURE - https://github.com/sadekbaroudi/qmk_firmware/blob/c6
 
 */
 
-#include "keyboards/fingerpunch/src/config_post.h"
+// #include "keyboards/fingerpunch/src/config_post.h"
