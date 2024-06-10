@@ -38,18 +38,17 @@ void matrix_init_custom(void) {
     for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
         setPinInputLow(row_pins[row]);
     }
-    matrix_io_delay();
-    spi_init();
+    setPinOutput(SPI_LATCH_PIN);
+    writePinHigh(SPI_LATCH_PIN);
     matrix_io_delay();
 
-    setPinOutput(SPI_LATCH_PIN);
-    spi_start(SPI_LATCH_PIN, SPI_lsbFirst, SPI_MODE, SPI_DIVISOR);
-    matrix_io_delay();
+    spi_init();
 }
 
 bool matrix_scan_custom(matrix_row_t current_matrix[]) {
     memset(current_matrix, 0, msize);
 
+    spi_start(SPI_LATCH_PIN, SPI_lsbFirst, SPI_MODE, SPI_DIVISOR);
     for (uint8_t col = 0; col < MATRIX_COLS; col++) {
         select_col(col);
 
@@ -58,6 +57,8 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
             current_matrix[row] |= (((rows & (1 << row)) ? 1 : 0) << col);
         }
     }
+    spi_stop();
+
     bool changed = (memcmp(current_matrix, prev_matrix, msize) != 0);
     memcpy(prev_matrix, current_matrix, msize);
     return changed;
