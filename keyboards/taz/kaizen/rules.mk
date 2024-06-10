@@ -18,8 +18,8 @@ RGB_MATRIX_ENABLE ?= no      # not supported yet, but will add
 RGB_MATRIX_DRIVER = ws2812
 
 SRC += keyboards/taz/kaizen/matrix.c
-QUANTUM_LIB_SRC += spi_master.c
 CUSTOM_MATRIX = lite
+SPI_DRIVER_REQUIRED = yes
 
 # FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches TODO: borrow from fingerpunch firmware
 
