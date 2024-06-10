@@ -21,6 +21,7 @@
 #define I2C0_SDA_PIN GP0
 #define I2C0_SCL_PIN GP1
 
+#define POINTING_DEVICE_CS_PIN GP9
 
 // TODO: Add RGB support
 // #define WS2812_DI_PIN GP13
