@@ -8,3 +8,6 @@ RGBLIGHT_SUPPORTED = yes    # RGB underglow is supported, but not enabled by def
 SPLIT_KEYBOARD = yes
 
 SERIAL_DRIVER = vendor
+
+CONSOLE_ENABLE = yes
+
