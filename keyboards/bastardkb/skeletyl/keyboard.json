@@ -61,8 +61,8 @@
         }
     },
     "matrix_pins": {
-        "cols": ["GP28", "GP21", "GP6", "GP7", "GP8"],
-        "rows": ["GP26", "GP5", "GP4", "GP9"]
+        "cols": ["GP20", "GP27", "GP12", "GP13", "GP15"],
+        "rows": ["GP26", "GP9", "GP8", "GP16"]
     },
     "diode_direction": "ROW2COL",
     "rgblight": {
@@ -89,7 +89,7 @@
         "rgb_matrix": true
     },
     "ws2812": {
-        "pin": "GP0",
+        "pin": "GP5",
         "driver": "vendor"
     },
     "processor": "RP2040",
