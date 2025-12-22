@@ -71,7 +71,7 @@
     },
     "split": {
         "serial": {
-            "pin": "GP1"
+            "driver": "vendor"
         },
         "transport": {
             "sync": {
